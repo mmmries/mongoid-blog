@@ -65,7 +65,9 @@ a:hover { color: #eeeeee;}
 }
 
 .post-title{
-    font-size: 26pt;
+    font-size: 16pt;
+    line-height: 20pt;
+    text-decoration: underline;
 }
 
 .post-date .date{

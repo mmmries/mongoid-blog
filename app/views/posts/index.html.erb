@@ -2,14 +2,14 @@
 
 <% @posts.each do |post| %>
   <div class="blog-post">
-    <div class="post-title"><%= post.title %></div>
     <div class="post-date">
       <div class="date"><%= post.created_at.mday %></div>
       <div class="mon-year"><%= post.created_at.strftime('%b') %> <%= post.created_at.year %></div>
     </div>
+    <div class="post-title"><%= link_to post.title, post %></div>
     <%= truncate( strip_tags(post.content), :length => 200 ) %>
     <br/>
-    <%= link_to 'Show', post %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+    <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
   </div>
   <br/>
 <% end %>
