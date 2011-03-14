@@ -20,6 +20,10 @@
     <%= f.text_area :content %>
   </div>
   <div class="field">
+    <%= f.label :preview %><br />
+    <%= f.text_area :preview %>
+  </div>
+  <div class="field">
     <%= f.label :tags %><br/>
     <% @post.tags ||= [] %>
     <%= f.text_field :tags, :value => @post.tags.join(", ") %><br/>

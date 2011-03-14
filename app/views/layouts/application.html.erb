@@ -7,8 +7,12 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="top-menu">
+    <a href="/" class="nav-link">Home</a> | 
+    <a href="/" class="nav-link">Recent Posts</a>
+  </div>
+  <div id="main-content">
+    <%= yield %>
+  </div>
 </body>
 </html>
